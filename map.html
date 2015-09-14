@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Map of Taipei City</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -10,8 +10,17 @@
         margin: 0px;
         padding: 0px
       }
-      .gmnoprint, .gm-style-cc {
-          visibility: hidden;
+      .gm-style > * {
+        transition: opacity 0.28s ease-in;
+      }
+      .gm-style > .gmnoprint {
+        opacity: .5;
+      }
+      .gm-style > .gmnoprint:hover, .gm-style .gm-style-cc:hover {
+        opacity: .75;
+      }
+      .gm-style .gm-style-cc {
+        opacity: .1;
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -78,7 +87,7 @@ function initialize() {
         "featureType": "road.highway",
         "elementType": "geometry.fill",
         "stylers": [
-          { "color": "#007549" }
+          { "color": "#0070bd" }
         ]
       },{
         "featureType": "road.highway",
