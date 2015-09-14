@@ -8,19 +8,21 @@
       html, body, #map-canvas {
         height: 100%;
         margin: 0px;
-        padding: 0px
+        padding: 0px;
+        background: #0f2e54;
       }
-      .gm-style > * {
-        transition: opacity 0.28s ease-in;
+      .gm-style > .gmnoprint, .gm-style-cc {
+        opacity: .01;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        transition: all 0.28s ease-in;
       }
-      .gm-style > .gmnoprint {
-        opacity: .5;
-      }
-      .gm-style > .gmnoprint:hover, .gm-style .gm-style-cc:hover {
+      .gm-style > .gmnoprint:hover, .gm-style-cc:hover {
         opacity: .75;
-      }
-      .gm-style .gm-style-cc {
-        opacity: .1;
+        filter: blur(0);
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -28,7 +30,7 @@
 var map;
 function initialize() {
   var mapOptions = {
-    zoom: 17,
+    zoom: 15,
     center: new google.maps.LatLng(25.019341,121.540752),
     styles: [
       {
@@ -94,7 +96,7 @@ function initialize() {
         "elementType": "geometry.stroke",
         "stylers": [
           { "color": "#0f2e54" },
-          { "weight": 6 }
+          { "weight": 4 }
         ]
       },{
         "featureType": "water",
