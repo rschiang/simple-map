@@ -23,41 +23,75 @@ function initialize() {
     center: new google.maps.LatLng(25.019341,121.540752),
     styles: [
       {
+        "elementType": "labels.text.fill",
         "stylers": [
-          { "saturation": 10 },
-          { "lightness": 30 },
-          { "gamma": 0.5 },
-          { "hue": "#ff003b" },
-          { "invert_lightness": true }
+          { "color": "#ffffff" }
         ]
       },{
-        "featureType": "road",
-        "elementType": "labels",
+        "elementType": "labels.text.stroke",
         "stylers": [
           { "visibility": "off" }
         ]
       },{
-        "featureType": "road.highway",
+        "featureType": "landscape",
         "elementType": "geometry",
         "stylers": [
-          { "color": "#000000" }
+          { "color": "#00042d" }
         ]
       },{
         "featureType": "poi",
-        "elementType": "labels",
+        "elementType": "geometry",
         "stylers": [
-          { "visibility": "off" }
+          { "color": "#00042d" }
         ]
       },{
-        "featureType": "transit",
-        "elementType": "labels.text",
+        "featureType": "poi.park",
+        "elementType": "geometry",
         "stylers": [
-          { "visibility": "off" }
+          { "color": "#00502d" }
         ]
       },{
-        "featureType": "transit.line",
+        "featureType": "road",
+        "elementType": "labels.text.fill",
         "stylers": [
-          { "visibility": "off" }
+          { "color": "#82c1ea" }
+        ]
+      },{
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#0f2e54" }
+        ]
+      },{
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#151f45" }
+        ]
+      },{
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          { "color": "#000a2e" }
+        ]
+      },{
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+          { "color": "#007549" }
+        ]
+      },{
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          { "color": "#0f2e54" },
+          { "weight": 6 }
+        ]
+      },{
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#105d99" }
         ]
       }
     ]
